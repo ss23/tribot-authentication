@@ -2,6 +2,8 @@
 
 error_reporting(0); // fuck da police
 
+$vip = true;
+
 switch ($_GET['action']) {
 	case 'getusername':
 		echo "[ERROR] NULL";
@@ -11,13 +13,16 @@ switch ($_GET['action']) {
 		echo "[SUCCESS] SESSION IS VALID";
 		break;
 	case 'getdata':
-		echo base64_encode("00\n" // Presume this is VIP or something
+		if ($vip)
+			echo base64_encode("10\n" // Somehow related to VIP, not 100% sure (1X == VIP, 0X == not)
 			. "fakename\n" // Username, of course
 			. '123'); // User ID
 		break;
 	case 'isvip':
-		// TODO: Do me, baby.
-		echo "FALSE";
+		if ($vip)
+			echo "TRUE";
+		else
+			echo "FALSE";
 		break;
 	case 'action':
 		echo "[SUCCESS] SESSION RENEWED";
