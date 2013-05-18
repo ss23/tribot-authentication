@@ -1,8 +1,20 @@
 <?php
 
 error_reporting(0); // fuck da police
+//watch out, badass detected
 
 $vip = true;
+
+function genSID($length) {
+	$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";	
+
+	$size = strlen( $chars );
+	for( $i = 0; $i < $length; $i++ ) {
+		$str .= $chars[ rand( 0, $size - 1 ) ];
+	}
+
+	return $str;
+}
 
 switch ($_GET['action']) {
 	case 'getusername':
@@ -31,7 +43,7 @@ switch ($_GET['action']) {
 		// echo "[ERROR] PASSWORD ERROR";
 		// echo "[ERROR] USERNAME ERROR";
 		// echo echo "[SUCCESS] sessionid";
-		echo "[SUCCESS] lolsohowsabouthemfakeIDs";
+		echo "[SUCCESS] " . genSID(21);
 		break;
 	default:
 		// If you get this, we should log it and figure out how to fix it and what it is
