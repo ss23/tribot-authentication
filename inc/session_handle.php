@@ -43,7 +43,7 @@ switch ($_GET['action']) {
 		// echo "[ERROR] PASSWORD ERROR";
 		// echo "[ERROR] USERNAME ERROR";
 		// echo echo "[SUCCESS] sessionid";
-		echo "[SUCCESS] " . genSID(21);
+		echo "[SUCCESS] " . genSID(49);
 		break;
 	default:
 		// If you get this, we should log it and figure out how to fix it and what it is
