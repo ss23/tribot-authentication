@@ -1,5 +1,7 @@
 A simple fake authentication server.
 
+![Battle on](MgLZD7D.jpg)
+
 disclaimer
 ==========
 Nothing here is affiliated with the official Tribot stuff at all. Use it all at your own risk -- don't blame me if you use it and get hacked.
